@@ -1,50 +1,54 @@
+function saludar() {
+    console.log('hola mundo');
+    return 1;
 
-function saludar( nombre ) {
-    // console.log( arguments );
-    // console.log('Hola ' + nombre );
-    return [1,2];
-
-    // Esto nunca se va a ejecutar
-    console.log('Soy un código que está después del return');
+    console.log('esto es codigo despues de un return')// esto nunca se va a ejecurar
 }
 
-const saludar2 = function( nombre ) {
-    console.log('Hola ' + nombre );
-}
+
+const saludar2 = function(nombre ) {
+console.log('hola ' + nombre);
+}// esto es una funcion anonima
+//sirve para q no se pueda usar el nombre de la variable 
+// dos veces
+
+
+
 
 const saludarFlecha = () => {
-    console.log('Hola Flecha');
+    console.log('hola ');
 }
 
-const saludarFlecha2 = ( nombre ) => {
-    console.log('Hola ' + nombre );
+const saludarFlecha2 = (nombreFlecha) => {
+    console.log('hola ' + nombreFlecha);
 }
 
 
+const retornoSaludar = saludar;
+console.log(retornoSaludar)
 
-const retornoDeSaludar = saludar( 'Fernando', 40, true, 'Costa Rica' ); // 1
 
-// saludar2( 'Fernando' );
+saludar();
+saludar2('sebastian');
+saludarFlecha();
+saludarFlecha2("flechaVeloz");
 
-// saludarFlecha();
-// saludarFlecha2('Melissa');
 
 function sumar( a, b ) {
     return a + b;
 }
 
-// const sumar2 = (a,b) => {
-//     return a + b;
-// }
-const sumar2 = (a,b) => a + b;
+const sumar2 = (a,b) => a + b;// funciona igual al de arriba
+
 
 function getAleatorio() {
     return Math.random();
 }
 
-// En una función de flecha, que no tenga llaves { }
-// getAleatorio2()
+
 const getAleatorio2 = () => Math.random();
 
-
-console.log(  getAleatorio2()   );
+console.log( sumar(2,3));
+console.log( sumar2(2,3));
+console.log( getAleatorio());
+console.log( getAleatorio2());

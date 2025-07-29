@@ -1,20 +1,30 @@
 
 
-const dia = '2'; // 0: Domingo
+
+const dia = 0;
 
 switch( dia ) {
     case 0:
-        console.log('Domingo');
+        console.log('domingo');
         break;
-    case 1: 
-        console.log('Lunes');
+    case 1:
+        console.log('lunes');
         break;
-    case '2':
-        console.log('Martes');
+    case 2:
+        console.log('martes');
         break;
-    default:
-        console.log('No es lunes, martes o domingo');
+    case 3:
+        console.log('miercoles');
+        break;
+    case 4:
+        console.log('jueves');
+        break;
+    case 5:
+        console.log('viernes');
+        break;
+    case 6:
+        console.log('sabado');
+        break;
+    default: 
+        console.log('respuesta cuando no hay casos')
 }
-
-
-

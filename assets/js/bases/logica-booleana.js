@@ -1,64 +1,50 @@
+
 const regresaTrue = () => {
-    console.log('Regresa true');
+    console.log('regresa true');
     return true;
 }
 
 const regresaFalse = () => {
-    console.log('Regresa false');
+    console.log('regresa False');
     return false;
 }
 
-console.warn('Not o la negación');
-console.log( true ); // true
-console.log( !true ); // false
-console.log( !false ); // true
+
+console.warn('not o la negacion');
+console.log(true);  //sale true
 
 console.log( !regresaFalse() ); // true
 
+console.warn( 'and' );// true si todos los valores son verdaderos
+console.log( true && true );// true
+console.log( true && !false );// true
 
-console.warn('And'); // true si todos los valores son verdaderos
-console.log( true && true ); // true
-console.log( true && !false ); // true
+console.log('======');
+console.log( regresaFalse() && regresaTrue() );// NO LEE EL AND Y DA FALSE
+console.log( regresaFalse() && regresaTrue() );// FALSE
 
-console.log('=========');
-console.log(  regresaFalse() && regresaTrue() ); // false
-console.log(  regresaTrue() && regresaFalse() ); // false
-
-console.log('==== && =====');
+console.log('===&&===');
 regresaFalse() && regresaTrue();
 
-console.log( '4 condiciones ', true && true && true && false ); // false
-
-
-console.warn('OR'); // true
+console.warn('OR');// para q de true una debe ser true lit
 console.log( true || false );
 console.log( false || false );
 
-console.log( regresaTrue() || regresaFalse() );
-console.log( '4 condiciones ', true || true || true || false ); // true
+console.log( regresaTrue() || regresaFalse() );// hay un true, regresa un true
 
-
-
-console.warn('Asignaciones');
+console.warn('asignaciones');
 
 const soyUndefined = undefined;
 const soyNull = null;
-const soyFalso = false;
+const soyFalse = false;
 
-const a1 = false && 'Hola Mundo' && 150; // ?
-const a2 = 'Hola' && 'Mundo' && soyFalso && true;
-const a3 = soyFalso || 'Ya no soy falso';
-const a4 = soyFalso || soyUndefined || soyNull || 'Ya no soy falso de nuevo' || true;
-const a5 = soyFalso || soyUndefined || regresaTrue() || 'Ya no soy falso de nuevo' || true;
+const a1 = false && 'hola mundo' && 156; // false y no lee los and
 
-console.log({a1, a2, a3, a4, a5 });
-
-if ( regresaFalse() && regresaTrue() && (true || false || true) ) {
-    console.log('Hacer algo');
-} else {
-    console.log('Hacer otra cosa');
-}
+const a2 = 'hola' && 'mundo' && soyFalse && true; 
+const a3 = soyFalse || 'ya no soy falso'; 
+const a4 = soyFalse || soyUndefined || soyNull || 'ya no soy falso de nuevo' || true; // retorna el string poq despues de leer un valor, ya no lee mas 
+const a5 = soyFalse || soyUndefined || regresaTrue || 'ya no soy falso de nuevo' || true; // retorna el regresaTrue poq despues de leer un valor, ya no lee mas 
 
 
 
-
+console.log({a1, a2, a3, a4, a5});

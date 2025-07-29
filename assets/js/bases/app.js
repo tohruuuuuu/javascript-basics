@@ -1,5 +1,5 @@
-// alert('Hola desde app.js');
 
+console.log( miNuevoNombre + ' jimenez' );
 
 
 // console.log( console.log('Hola Mundo') );
@@ -20,5 +20,14 @@ const saludo =  c + d;
 c = 'Hola de nuevo';
 
 // console.table({a, b, c, d, x });
+
+
+
+
+
+
+
+
+
 
 let miNuevoNombre = 'Fernando Herrera';

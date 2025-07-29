@@ -1,16 +1,9 @@
+// break
+//case
+//continue 
+// let this = 0 ** no se puede
 
 
 
 
-
-
-
-
-let _objeto$123 = 123;
-let precio99_99 = 123;
-
-let jugadorConPuntajeMasAlto = 'Fernando';
-
-class JuegoAnio {
-
-}
+// let const = 123; ** error de sintaxsis pero si se puede llamar constante

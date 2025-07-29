@@ -1,41 +1,38 @@
 
+
+
 let a = 10;
-let b = a;
-a = 30;
+let b = a 
+a = 30 ;
 
-console.log({ a, b });
+console.log({a, b});// print a = 30  y b=10
 
+let juan = {nombre: 'juan'};
+let ana = juan;
 
-let juan = { nombre: 'Juan' };
-let ana  = { ...juan };
-ana.nombre = 'Ana';
+console.log({juan, ana});
 
-console.log({ juan, ana });
-
-
-const cambiaNombre = ({ ...persona }) => {
-    persona.nombre = 'Tony';
+const cambiaNombre = (persona) => {
+    persona.nombre = 'tony';
     return persona;
 }
 
-let peter = { nombre: 'Peter' };
-let tony  = cambiaNombre( peter );
+let peter = {nombre:'peter' };
 
 
-console.log({ peter, tony });
+// arreglos
+const frutas = ['manzana', 'pera', 'mango'];
 
-// Arreglos
-const frutas = ['Manzana', 'Pera', 'Piña'];
+console.time('slice')
+const otrasFrutas = frutas.slice;
+console.timeEnd('slice')
 
-console.time('slice');
-const otrasFrutas = frutas.slice();
-console.timeEnd('slice');
-
-console.time('spread');
+console.time('spread')
 const otrasFrutas2 = [...frutas];
-console.timeEnd('spread');
+console.timeEnd('spread')
 
+otrasFrutas.push('sandia');
 
-otrasFrutas.push('Mango');
+console.log({frutas, otrasFrutas});
 
-console.table({ frutas, otrasFrutas });
+//spread tiende a ser mas rapido 
